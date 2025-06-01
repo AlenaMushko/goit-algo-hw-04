@@ -49,8 +49,8 @@ def compare_algorithms():
     for size in sizes:
         arr = [random.randint(0, 10000) for _ in range(size)]
 
-        merge_time = timeit.timeit(lambda: merge_sort(arr), number=5)
-        insertion_time = timeit.timeit(lambda: insertion_sort(arr), number=5)
+        merge_time = timeit.timeit(lambda: merge_sort(arr[:]), number=5)
+        insertion_time = timeit.timeit(lambda: insertion_sort(arr[:]), number=5)
         timsort_time = timeit.timeit(lambda: sorted(arr), number=5)
 
         merge_times.append(merge_time)
